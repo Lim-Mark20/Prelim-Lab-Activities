@@ -1,1 +1,206 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Container */
+.cv-container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 50px 70px;
+  background-color: #e5e8ec;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* Header */
+.cv-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact-item a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: #004a99;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #ccc;
+  margin: 0 6px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 35px 0;
+}
+
+/* Content */
+.cv-content {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Profile */
+.profile-text {
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0073e6;
+  font-size: 1.2rem;
+}
+
+/* Technical Skills */
+.tech-category {
+  background-color: #f8fafd;
+  padding: 18px 22px;
+  border-left: 4px solid #0073e6;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.tech-items {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 35px 25px;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    padding: 25px 15px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .profile-text,
+  .skills-list li,
+  .tech-items {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: none;
+  }
+
+  .cv-container {
+    box-shadow: none;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .divider {
+    background: #000;
+  }
+
+  .section-title {
+    page-break-after: avoid;
+  }
+
+  .profile-section,
+  .skills-section,
+  .technical-skills {
+    page-break-inside: avoid;
+  }
+}
