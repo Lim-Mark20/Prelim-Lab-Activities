@@ -1,5 +1,4 @@
 nav {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #7eccfa;
@@ -24,3 +23,4 @@ nav a:hover {
 nav a:last-child {
   margin-right: 0;
 }
+
